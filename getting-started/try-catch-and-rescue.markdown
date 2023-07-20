@@ -155,7 +155,7 @@ iex> Enum.find(-50..50, &(rem(&1, 13) == 0))
 
 ## Exits
 
-All Elixir code runs inside processes that communicate with each other. When a process dies of "natural causes" (e.g., unhandled exceptions), it sends an `exit` signal. A process can also die by explicitly sending an `exit` signal:
+All Elixir code runs inside processes that communicate with each other. When a process dies of "unnatural causes" (e.g., unhandled exceptions), it sends an `exit` signal. A process can also die by explicitly sending an `exit` signal:
 
 ```elixir
 iex> spawn_link(fn -> exit(1) end)
